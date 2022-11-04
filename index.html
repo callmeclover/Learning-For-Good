@@ -5,5 +5,44 @@
   <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.js"></script>
 <canvas id="canvas" width="656" height="550"></canvas>
+    <script>var myNetwork = new synaptic.Architect.Perceptron(2, 2, 1)
+var trainer = new synaptic.Trainer(myNetwork)
+
+var trainingSet = [
+  {
+    input: [0,0],
+    output: [0]
+  },
+  {
+    input: [0,1],
+    output: [1]
+  },
+  {
+    input: [1,0],
+    output: [1]
+  },
+  {
+    input: [1,1],
+    output: [0]
+  },
+      {
+    input: [0,0],
+    output: [0]
+  },
+  {
+    input: [0,1],
+    output: [1]
+  },
+  {
+    input: [1,0],
+    output: [1]
+  },
+  {
+    input: [1,1],
+    output: [0]
+  },
+]
+
+trainer.train(trainingSet);</script>
   </body>
 </html>
